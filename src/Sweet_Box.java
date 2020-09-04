@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sweet_Box implements Box_Interface {
+public  class Sweet_Box implements Box_Interface {
     private ArrayList<Sweety> box = new ArrayList<>();
 
     @Override
@@ -17,35 +17,16 @@ public class Sweet_Box implements Box_Interface {
     public void deleteWithIndex(int index) {
         box.remove(index);
     }
-
     @Override
-    public void weightBox() {
-        int i = 0;
-        for (Sweety sweety : box) {
-            i += sweety.weight;
-        }
-        System.out.println("Вес коробки - " + i);
-    }
-
-    private int weightBoxInt() {
+    public int weightBoxInt() {
         int i = 0;
         for (Sweety sweety : box) {
             i += sweety.weight;
         }
         return i;
     }
-
-
     @Override
-    public void costBox() {
-        int i = 0;
-        for (Sweety sweety : box) {
-            i += sweety.cost;
-        }
-        System.out.println("Цена коробки - " + i);
-    }
-
-    private int costBoxInt() {
+    public int costBoxInt() {
         int i = 0;
         for (Sweety sweety : box) {
             i += sweety.cost;
