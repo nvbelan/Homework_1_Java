@@ -5,9 +5,9 @@ public interface Box_Interface {
 
     void deleteWithIndex(int index);
 
-    void weightBox();
+    int weightBoxInt();
 
-    void costBox();
+    int costBoxInt();
 
     void allInfo();
 
