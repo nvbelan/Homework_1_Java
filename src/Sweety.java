@@ -1,4 +1,4 @@
-public class Sweety {
+public abstract class Sweety {
     String name;
     int weight;
     int cost;
