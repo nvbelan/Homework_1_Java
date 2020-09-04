@@ -10,4 +10,7 @@ public interface Box_Interface {
     void costBox();
 
     void allInfo();
+
+    void weightIndex(int index);
+    void costIndex (int index);
 }

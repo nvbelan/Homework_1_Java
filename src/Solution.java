@@ -13,5 +13,11 @@ public class Solution {
         sweet_box.costBox();
         sweet_box.weightBox();
         sweet_box.allInfo();
+        sweet_box.weightIndex(6);
+        sweet_box.weightBox();
+        sweet_box.costBox();
+        sweet_box.costIndex(8);
+        sweet_box.costBox();
+
     }
 }

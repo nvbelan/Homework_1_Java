@@ -27,6 +27,15 @@ public class Sweet_Box implements Box_Interface {
         System.out.println("Вес коробки - " + i);
     }
 
+    private int weightBoxInt() {
+        int i = 0;
+        for (Sweety sweety : box) {
+            i += sweety.weight;
+        }
+        return i;
+    }
+
+
     @Override
     public void costBox() {
         int i = 0;
@@ -34,6 +43,14 @@ public class Sweet_Box implements Box_Interface {
             i += sweety.cost;
         }
         System.out.println("Цена коробки - " + i);
+    }
+
+    private int costBoxInt() {
+        int i = 0;
+        for (Sweety sweety : box) {
+            i += sweety.cost;
+        }
+        return i;
     }
 
     @Override
@@ -50,4 +67,39 @@ public class Sweet_Box implements Box_Interface {
             }
         }
     }
+
+
+    @Override
+    public void weightIndex(int index) {
+        int minPosition = 0;
+        int minWeight = box.get(0).weight;
+        int marker = -1;
+        while (index <= weightBoxInt()) {
+            for (Sweety sweety : box) {
+                marker++;
+                if (sweety.weight < minWeight) {
+                    minPosition = marker;
+                }
+            }
+            box.remove(minPosition);
+        }
+    }
+
+    @Override
+    public void costIndex(int index) {
+        int minPosition = 0;
+        int minCost = box.get(0).cost;
+        int marker = -1;
+        while (index <= costBoxInt()) {
+
+            for (Sweety sweety : box) {
+                marker++;
+                if (sweety.cost <= minCost) {
+                    minPosition = marker;
+                }
+            }
+            box.remove(minPosition);
+        }
+    }
 }
+
