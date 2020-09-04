@@ -10,14 +10,11 @@ public class Solution {
         sweet_box.addSweety(new Chocolate("choco3", 1, 3, "dark"));
         sweet_box.deleteLast();
         sweet_box.deleteWithIndex(3);
-        sweet_box.costBox();
-        sweet_box.weightBox();
         sweet_box.allInfo();
         sweet_box.weightIndex(6);
-        sweet_box.weightBox();
-        sweet_box.costBox();
+        System.out.println(sweet_box.weightBoxInt() + " Вес коробки");
         sweet_box.costIndex(8);
-        sweet_box.costBox();
+        System.out.println(sweet_box.costBoxInt() + " Цена коробки");
 
     }
 }
